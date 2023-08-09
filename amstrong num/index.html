@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a{
+              
+               border:2px solid black;
+               height:200px;
+               width:400px;
+               margin-left:30%;
+               background-color:rgba(10, 167, 172, 0.507);
+               padding:20px;
+}
+.b{
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+}
+    </style>
+</head>
+<body>
+
+    <div class="a">
+     <h1>Enter the Number</h1>
+     <label>Number:</label>
+     <input type="text" id="in">
+     <button type="submit" onclick="submit()">Submit</button>
+     
+     <div class="b">
+       <p id="one"></p>
+     </div>
+<script>
+    let sum=0;
+function submit()
+{
+    let n=document.getElementById("in").value;
+
+for(let i=0;i<n.length;i++)
+{
+    sum+= parseInt(n[i]*n[i]*n[i])
+}
+if(sum==n)
+{
+    document.getElementById("one").innerHTML=n+"is armstrong number";
+}
+else{
+    document.getElementById("one").innerHTML=n+"is not armstrong number";
+}
+}
+console.log(sum);
+</script>
+
+</body>
+</html>
